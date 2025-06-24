@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>ถังดักจับขยะบนผิวน้ำ</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="wave-bg"></div>
+
+<header>
+  <div class="logo-title">
+    <img src="assets/logo.png" alt="โลโก้" />
+    <h1>ถังดักจับขยะบนผิวน้ำ</h1>
+  </div>
+  <div class="top-right contact">
+    <a href="mailto:contact@project.com">✉️ contact@project.com</a><a href="tel:+66812345678">📞 +66 81 234 5678</a>
+  </div>
+</header>
+
+<nav>
+  <a href="#dashboard">Dashboard</a>
+  <a href="#about">โครงการ</a>
+  <a href="#article">บทความ & สถิติ</a>
+  <a href="#contact-form">ติดต่อเรา</a>
+</nav>
+
+<main>
+  <section id="dashboard" class="grid">
+    <div class="card">
+      <h2>📷 กล้อง ESP32-CAM</h2>
+      <img id="esp32-image" src="https://via.placeholder.com/600x400?text=ESP32+CAM">
+      <button onclick="reloadImage()">โหลดภาพใหม่</button>
+    </div>
+    <div class="card">
+      <h2>📈 คุณภาพน้ำ (อัปเดต)</h2>
+      <canvas id="chart"></canvas>
+      <div class="mini-circle">
+        <canvas id="trash-circle"></canvas>
+        <p id="trash-perc-text"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card slides">
+    <p id="slide1"></p>
+    <p id="slide2"></p>
+  </section>
+
+  <section class="card" id="contact-form">
+    <h2>✏️ ส่งข้อเสนอแนะ / ติดต่อเรา</h2>
+    <form onsubmit="submitForm(); return false;">
+      <textarea id="msg" placeholder="พิมพ์ข้อความ..."></textarea>
+      <button type="submit" class="btn">ส่งข้อความ</button>
+    </form>
+  </section>
+
+  <section class="card" id="about">
+    <h2>เกี่ยวกับโครงการ</h2>
+    <p>วิชาโครงงาน สาขาเทคโนโลยีสารสนเทศ ชั้น ปวส.2/12 จากวิทยาลัยเทคโนโลยีอรรถวิทย์พณิชยการ </p>
+    <p>โครงการนี้มีวัตถุประสงค์เพื่อพัฒนาระบบดักจับขยะบนผิวน้ำ โดยใช้เทคโนโลยี IoT และการวิเคราะห์ข้อมูล เพื่อช่วยลดปัญหาขยะในแหล่งน้ำและส่งเสริมการอนุรักษ์สิ่งแวดล้อม</p>
+    <p>จัดทำโดย: นายวณิช ถนอมพันธ์, นาย ณัฐพัสธร ฐิตินํานันท์, นาย ธนิก อินทรจิต, นาย เกริกไกรวัล แสงคล้าย<br>อาจารย์ที่ปรึกษา: อาจารย์ฐิติชญา มณีฉาย</p>
+    <p><a href="assets/บทที่1.pdf" target="_blank" class="btn">ดาวน์โหลดรายงาน PDF</a></p>
+  </section>
+
+  <section class="card" id="article">
+    <h2>บทความ & สถิติทรงพลัง</h2>
+    <p>ประเทศไทยผลิตขยะพลาสติกกว่า 3.2 ล้านตันต่อปี...</p>
+    <p><a href="assets/report.pdf" target="_blank" class="btn">ดาวน์โหลดรายงาน PDF</a></p>
+  </section>
+</main>
+
+<footer>
+  <p>ติดต่อ: <a href="mailto:contact@project.com">✉️ contact@project.com</a> | <a href="tel:+66812345678">📞 +66 81 234 5678</a></p>
+  <p>&copy; 2025 วิทยาลัยเทคโนโลยีอรรถวิทย์พณิชยการ</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
